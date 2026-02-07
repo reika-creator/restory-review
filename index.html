@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re:Story 口コミ作成サポート</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Re:Story<br><small>口コミ作成サポート</small></h1>
+        
+        <p class="intro">アンケートに答えるだけで、AIがあなたにぴったりの口コミを作成します✨</p>
+
+        <div class="question">
+            <p>Q1. 一番お悩みは？</p>
+            <select id="q1">
+                <option value="ほうれい線や口元">ほうれい線・口元</option>
+　　　　　　　　 <option value="シミや肝斑">シミ・色素沈着</option>
+　              <option value="フェイスライン">フェイスライン</option>
+                <option value="首のシワ">首のシワ</option>
+                <option value="目元のハリ">目元のハリ</option>
+                <option value="肌全体のくすみ">肌全体のくすみ</option>
+ 　　　　　　　　<option value="生え際や白髪の髪の悩み">生え際・薄毛</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <p>Q2. 今回「Re:Story」へ行ってみようと思ったきっかけは？</p>
+            <select id="q2">
+                <option value="知人からの紹介">知人からの紹介</option>
+                <option value="痛くない水光ジェットに惹かれて">痛くない水光ジェット</option>
+                <option value="西葛西駅の近くで探していて">西葛西駅の近く</option>
+                <option value="完全個室でリラックスしたくて">完全個室</option>
+                <option value="ダウンタイムがないのが助かるので">ダウンタイムなし</option>
+                <option value="オーナーの人柄が良さそうだったので">オーナーの人柄</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <p>Q3. これからどんな「素敵な未来」を肌に期待しますか？</p>
+            <select id="q3">
+                <option value="肌の根本改善をして、自分に自信を持ちたい">根本改善して自信を持ちたい</option>
+                <option value="直近のイベントに一番綺麗な自分で参加したい">イベントに綺麗な姿で出たい</option>
+                <option value="仕事の第一印象を良くして、もっと活躍したい">仕事で活躍したい</option>
+                <option value="「若返った？」と周りに驚かれたい">周りを驚かせたい</option>
+                <option value="継続して、10年後の自分を輝かせたい">10年後の自分への投資</option>
+            </select>
+        </div>
+
+        <button onclick="generateReview()" class="btn-generate">文章を作成する</button>
+
+        <div id="resultArea" style="display:none;">
+            <textarea id="outputText" readonly></textarea>
+            <p class="instruction">上の文章をコピーして、下のボタンから投稿してください✨</p>
+            <button onclick="copyAndGo()" class="btn-post">コピーして投稿画面へ</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
